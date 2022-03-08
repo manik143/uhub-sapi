@@ -1,0 +1,38 @@
+#%RAML 1.0 Library
+usage: library for resource types
+
+resourceTypes:
+  all:
+    get?:
+      responses:
+        200:
+          body:
+            application/json:
+              type: <<getResponceType>>
+    post?:
+      body:
+        application/json:
+          type: <<postRequestType>>
+      responses:
+        201:
+          headers:
+            Location:
+              type: string
+          body:
+            application/json:
+              type: <<postResponseType>>
+    put?:
+      body:
+        application/json:
+          type: <<putRequestType>>
+      responses:
+        200:
+          body:
+            application/json:
+              type: <<putRequestType>>
+          
+        
+          
+          
+              
+      
